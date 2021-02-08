@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <div class="header">
       <div class="header-content">
-        <a href="/">
+        <a @click="activeTab= 'Hero'">
           <h1>Eddie Teixeira</h1>
         </a>
         <ul>
@@ -15,8 +15,10 @@
       </div>
     </div>
     <!-- Components -->
-    <Hero v-if="activeTab === 'Hero'" heroTitle="Desenvolvimento de aplicativos e websites"/>
-    <Atuacao v-if="activeTab === 'Atuacao'" />
+    <div class="components">
+      <Hero v-if="activeTab === 'Hero'" heroTitle="Desenvolvimento de aplicativos e websites"/>
+      <Atuacao v-if="activeTab === 'Atuacao'" />
+    </div>
   </div>
 </template>
 
@@ -38,12 +40,15 @@ export default {
 </script>
 
 <style scoped>
+.components {
+  padding-top: 45px;
+}
 .header {
   width: 100%;
   background-color: #009cff;
   position: fixed;
   z-index: 999;
-  border-top: 10px solid #1a0e33
+  border-bottom: 10px solid #1a0e33
 }
 .header-content {
   max-width: 1200px;
@@ -68,7 +73,7 @@ li {
   /* margin: 0 10px; */
 }
 a {
-  color: #fff;
+  color: #1a0e33;
   text-decoration: none;
   font-weight: bold;
   padding: 5px 10px;
@@ -76,7 +81,7 @@ a {
 }
 a:hover {
   border-radius: 4px;
-  color: #1a0e33;
+  color: #fff;
   cursor: pointer;
 }
 </style>

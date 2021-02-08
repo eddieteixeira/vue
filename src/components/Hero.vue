@@ -21,7 +21,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hero {
-  height: 90vh;
+  height: 85vh;
   padding: 20px;
   display: inline-flex;
   width: 100%;
@@ -31,7 +31,7 @@ export default {
 }
 @media(max-width: 992px) {
   .hero {
-    height: auto;
+    height: 87vh;
     width: auto;
     display: flex;
     flex-direction: column;
