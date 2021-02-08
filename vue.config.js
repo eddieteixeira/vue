@@ -1,3 +1,3 @@
-// module.exports = {
-//  publicPath: 'https://eddieteixeira.dev/app'
-// };
+//  module.exports = {
+//   publicPath: 'https://eddieteixeira.dev/app'
+//  };

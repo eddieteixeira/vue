@@ -7,8 +7,8 @@
           <h1>Eddie Teixeira</h1>
         </a>
         <ul>
-          <li><a @click="activeTab= 'Hero'">soluções</a></li>
-          <li><a @click="activeTab= 'Atuacao'">portfolio</a></li>
+          <li><a @click="activeTab= 'Atuacao'">soluções</a></li>
+          <li><a @click="activeTab= 'Portfolio'">portfolio</a></li>
           <li><a @click="activeTab= 'Atuacao'">sobre</a></li>
           <li><a @click="activeTab= 'Atuacao'">contato</a></li>
         </ul>
@@ -18,6 +18,7 @@
     <div class="components">
       <Hero v-if="activeTab === 'Hero'" heroTitle="Desenvolvimento de aplicativos e websites"/>
       <Atuacao v-if="activeTab === 'Atuacao'" />
+      <Portfolio v-if="activeTab === 'Portfolio'" />
     </div>
   </div>
 </template>
@@ -25,11 +26,13 @@
 <script>
 import Hero from './Hero.vue';
 import Atuacao from './Atuacao.vue';
+import Portfolio from './Portfolio.vue';
 export default {
   name: 'Main',
   components: {
     Hero,
-    Atuacao
+    Atuacao,
+    Portfolio
   },
   data() {
     return {
@@ -41,14 +44,14 @@ export default {
 
 <style scoped>
 .components {
-  padding-top: 45px;
+  padding: 45px 20px 20px 20px;
 }
 .header {
   width: 100%;
   background-color: #009cff;
   position: fixed;
   z-index: 999;
-  border-bottom: 10px solid #1a0e33
+  border-bottom: 6px solid #1a0e33
 }
 .header-content {
   max-width: 1200px;
@@ -63,6 +66,10 @@ h1 {
   font-size: 20px;
   font-weight: 700;
   text-align: left;
+  transition: 0.3s all;
+}
+h1:hover{
+  color: #fff;
 }
 ul {
   list-style-type: none;

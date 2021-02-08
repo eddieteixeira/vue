@@ -1,38 +1,37 @@
 <template>
   <div class="atuacao">
-    <h3>Atuação</h3>
+    <h3>Soluções</h3>
     <div class="atuacao-grid">
-      <div class="atuacao-item">
+      <div class="atuacao-item" @click="activeTab='websites'">
         <img src="../assets/web-icon.png" alt="">
         <a>Websites</a>
-        <p class="hidden">
-          WEBSITES Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
-        </p>
       </div>
-       <div class="atuacao-item">
+       <div class="atuacao-item" @click="activeTab='aplicativos'">
         <img src="../assets/mobile.png" alt="">
         <a>Aplicativos</a>
-          <p class="hidden">
-          APLICATIVOS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
-        </p>
       </div>
-       <div class="atuacao-item">
+       <div class="atuacao-item" @click="activeTab='lp'">
         <img src="../assets/otimizacao-icon.png" alt="">
         <a>Landing pages</a>
-        <p class="hidden">
-          LPS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
-        </p>
       </div>
-       <div class="atuacao-item">
+       <div class="atuacao-item" @click="activeTab='outros'">
         <img src="../assets/dev-icon.png" alt="">
         <a>Outros</a>
-        <p class="hidden">
-          OUTROS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
-        </p>
       </div>
     </div>
     <div class="atuacao-content">
-
+      <p v-if="activeTab === 'websites' ">
+        WEBSITES Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
+      </p>
+      <p v-if="activeTab === 'aplicativos' ">
+        APLICATIVOS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
+      </p>
+      <p v-if="activeTab === 'lp' ">
+        LPS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
+      </p>
+      <p v-if="activeTab === 'outros' ">
+        OUTROS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam facilis amet officia quidem at dolor delectus eum vitae temporibus impedit? Nobis reprehenderit fuga dignissimos doloremque vel, necessitatibus hic expedita earum.
+      </p>
     </div>
   </div>
 </template>
@@ -42,6 +41,11 @@ export default {
   name: 'Atuacao',
   props: {
     atuacaoText: String,
+  },
+  data() {
+    return {
+      activeTab: 'websites'
+    }
   }
 }
 </script>
@@ -50,12 +54,20 @@ export default {
 .hidden {
   display: none;
 }
+.atuacao {
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .atuacao-grid {
   display: grid;
   justify-content: center;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   grid-gap: 15px;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, 200px);
   margin-top: 20px;
 }
 .atuacao-item {
@@ -75,8 +87,10 @@ export default {
   color: #009cff;
 }
 h3 {
+  color: #1a0e33;
   font-size: 43px;
   z-index: 99;
+  margin-top: 95px;
 }
 a {
   color: #464646;
@@ -92,5 +106,11 @@ a {
    max-width: 70px;
    margin: 10px;
 }
-
+.atuacao-content {
+  margin: 45px auto;
+  max-width: 800px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6em;
+}
 </style>
