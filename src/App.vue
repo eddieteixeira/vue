@@ -29,7 +29,6 @@ body {
   color: #2c3e50;
   margin: 0;
 }
-
 p, a, ul, li, span {
   font-family: 'Roboto', sans-serif;
 }
