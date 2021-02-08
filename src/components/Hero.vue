@@ -21,7 +21,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hero {
-  height: 100vh;
+  height: 90vh;
   padding: 20px;
   display: inline-flex;
   width: 100%;
