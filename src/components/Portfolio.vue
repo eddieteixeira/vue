@@ -49,10 +49,18 @@ export default {
 
 <style scoped>
 .portfolio {
-  height: 87vh;
+  height: 86vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: linear-gradient(rgba(255,255,255,0.99), rgba(255,255,255,0.95)), url('../assets/desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media(max-width: 992px) {
+  .portfolio {
+    height: auto;
+  }
 }
 .portfolio-grid {
   display: grid;
@@ -69,9 +77,9 @@ export default {
   width: 100%;
   object-fit: contain;
   margin: 10px;
-  transition: 0.2s all;
+  transition: 0.3s all;
 }
 .portfolio-item img:hover{
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 </style>

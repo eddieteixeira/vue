@@ -20,17 +20,21 @@ export default {
 
 <style scoped>
 .hero {
-  height: 85vh;
+  height: 82vh;
   padding: 20px;
   display: inline-flex;
   width: 100%;
   max-width: 1400px;
   justify-content: space-around;
   align-items: center;
+  background: linear-gradient(rgba(255,255,255,0.99), rgba(255,255,255,0.95)), url('../assets/code.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media(max-width: 992px) {
   .hero {
-    height: 87vh;
+    height: auto;
+    margin: 20px;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -55,7 +59,7 @@ h2 {
 }
 @media(max-width: 992px) {
   h2 {
-    font-size: 40px;
+    font-size: 8vw;
   }
 }
 

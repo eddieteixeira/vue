@@ -3,19 +3,19 @@
     <h3>Atuação</h3>
     <div class="atuacao-grid">
       <div class="atuacao-item" @click="activeTab='websites'">
-        <img src="../assets/web-icon.png" alt="">
+        <img src="../assets/web.svg" alt="">
         <a>Websites</a>
       </div>
        <div class="atuacao-item" @click="activeTab='aplicativos'">
-        <img src="../assets/mobile.png" alt="">
+        <img src="../assets/phone.svg" alt="">
         <a>Aplicativos</a>
       </div>
        <div class="atuacao-item" @click="activeTab='lp'">
-        <img src="../assets/otimizacao-icon.png" alt="">
+        <img src="../assets/funnel.svg" alt="">
         <a>Landing pages</a>
       </div>
        <div class="atuacao-item" @click="activeTab='outros'">
-        <img src="../assets/dev-icon.png" alt="">
+        <img src="../assets/code.svg" alt="">
         <a>Outros</a>
       </div>
     </div>
@@ -43,7 +43,7 @@ export default {
     atuacaoText: String,
   },
   data() {
-    return {
+    return { 
       activeTab: 'websites'
     }
   }
@@ -55,10 +55,18 @@ export default {
   display: none;
 }
 .atuacao {
-  height: 87vh;
+  height: 86vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: linear-gradient(rgba(255,255,255,0.99), rgba(255,255,255,0.92)), url('../assets/terminal.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media(max-width: 992px) {
+  .atuacao {
+    height: auto;
+  }
 }
 .atuacao-grid {
   display: grid;
@@ -77,14 +85,21 @@ export default {
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  background-color: #fff;
   border-radius: 5px;
+  transition: 0.2s all;
 }
 .atuacao-item:hover{
   box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
   cursor: pointer;
+  background: #009cff;
+  margin-top: -5px;
 }
 .atuacao-item:hover a{
-  color: #009cff;
+  color: #fff;
+}
+.atuacao-item:hover img{
+  filter: invert(1);
 }
 a {
   color: #464646;
@@ -98,7 +113,9 @@ a {
 }
 .atuacao-item img{
    max-width: 70px;
+   max-height: 60px;
    margin: 10px;
+   opacity: 0.8;;
 }
 .atuacao-content {
   margin: 45px auto;

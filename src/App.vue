@@ -36,6 +36,6 @@ h3 {
   color: #1a0e33;
   font-size: 43px;
   z-index: 99;
-  margin-top: 95px;
+  /* margin-top: 95px; */
 }
 </style>

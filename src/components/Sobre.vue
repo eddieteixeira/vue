@@ -24,6 +24,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: linear-gradient(rgba(255,255,255,0.99), rgba(255,255,255,0.95)), url('../assets/connect.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media(max-width: 992px) {
+  .sobre {
+    height: auto;
+  }
 }
 .sobre-flex {
   display: flex;
