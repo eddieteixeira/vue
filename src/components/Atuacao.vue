@@ -1,6 +1,6 @@
 <template>
   <div class="atuacao">
-    <h3>Soluções</h3>
+    <h3>Atuação</h3>
     <div class="atuacao-grid">
       <div class="atuacao-item" @click="activeTab='websites'">
         <img src="../assets/web-icon.png" alt="">
@@ -85,12 +85,6 @@ export default {
 }
 .atuacao-item:hover a{
   color: #009cff;
-}
-h3 {
-  color: #1a0e33;
-  font-size: 43px;
-  z-index: 99;
-  margin-top: 95px;
 }
 a {
   color: #464646;

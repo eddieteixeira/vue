@@ -4,7 +4,7 @@
       <h2>{{ heroTitle }}</h2>
     </div>
     <div class="hero-img">
-      <img src="../assets/hero.png" alt="">
+      <img src="../assets/hero1-2.png" alt="">
     </div>
   </div>
 </template>
@@ -18,7 +18,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hero {
   height: 85vh;
@@ -67,16 +66,39 @@ h2 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-image: url('../assets/hero2-2.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media(max-width: 992px) {
   .hero-img {
     width: 100%;
   }
 }
+
+.floating {   
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+    margin-left: 30px; 
+    margin-top: 5px; 
+} 
+  
+@keyframes floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 10px); } 
+    100%   { transform: translate(0, -0px); }     
+} 
+
 .hero-img img {
   width: 100%;
   height: auto;
   -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.1));
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.1));
+  transition: 0.4s;
+  animation: floating 3s ease-in-out infinite
 }
+
 </style>

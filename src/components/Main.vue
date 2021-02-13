@@ -7,9 +7,9 @@
           <h1>Eddie Teixeira</h1>
         </a>
         <ul>
-          <li><a @click="activeTab= 'Atuacao'">soluções</a></li>
+          <li><a @click="activeTab= 'Atuacao'">atuação</a></li>
           <li><a @click="activeTab= 'Portfolio'">portfolio</a></li>
-          <li><a @click="activeTab= 'Atuacao'">sobre</a></li>
+          <li><a @click="activeTab= 'Sobre'">sobre</a></li>
           <li><a @click="activeTab= 'Atuacao'">contato</a></li>
         </ul>
       </div>
@@ -19,6 +19,7 @@
       <Hero v-if="activeTab === 'Hero'" heroTitle="Desenvolvimento de aplicativos e websites"/>
       <Atuacao v-if="activeTab === 'Atuacao'" />
       <Portfolio v-if="activeTab === 'Portfolio'" />
+      <Sobre v-if="activeTab === 'Sobre'"/>
     </div>
   </div>
 </template>
@@ -27,12 +28,14 @@
 import Hero from './Hero.vue';
 import Atuacao from './Atuacao.vue';
 import Portfolio from './Portfolio.vue';
+import Sobre from './Sobre.vue';
 export default {
   name: 'Main',
   components: {
     Hero,
     Atuacao,
-    Portfolio
+    Portfolio,
+    Sobre
   },
   data() {
     return {
@@ -40,6 +43,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style scoped>
